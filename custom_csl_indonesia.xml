@@ -1,41 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en">
   <info>
     <title>Indonesia Name-Year with Colon Page</title>
-    <id>http://www.example.com/indonesia-name-year-colon</id>
+    <id>http://www.example.com/styles/indonesia-name-year-colon</id>
     <link href="http://www.zotero.org/styles" rel="self"/>
     <author>
       <name>ChatGPT Custom Style</name>
     </author>
     <category citation-format="author-date"/>
-    <category field="generic"/>
     <updated>2025-01-01T00:00:00+00:00</updated>
-    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under CC BY-SA 3.0</rights>
+    <rights>CC BY-SA 3.0</rights>
   </info>
 
-  <!-- Citation format -->
+  <!-- CITATION: (Author, Year:Page) -->
   <citation et-al-min="4" et-al-use-first="1" disambiguate-add-year-suffix="true">
     <layout prefix="(" suffix=")" delimiter="; ">
       <group delimiter=", ">
         <names variable="author">
-          <name form="short"/>
-          <et-al term="et-al" prefix=" "/>
+          <name form="short" and="text"/>
         </names>
         <date variable="issued">
           <date-part name="year"/>
         </date>
       </group>
-      <label variable="page" form="short" prefix=":"/> 
-      <text variable="page"/>
+      <!-- locator is used by citation tools to pass page/section info -->
+      <text variable="locator" prefix=":"/>
     </layout>
   </citation>
 
-  <!-- Bibliography format -->
+  <!-- BIBLIOGRAPHY: simple author-year-title-publisher -->
   <bibliography et-al-min="4" et-al-use-first="1" entry-spacing="1" line-spacing="1">
-    <layout suffix=".">
+    <layout suffix="." delimiter=". ">
       <group delimiter=". ">
         <names variable="author">
-          <name form="long" delimiter=", " and=" & "/>
+          <name form="long" delimiter=", " initialize-with=". "/>
         </names>
         <date variable="issued">
           <date-part name="year"/>
