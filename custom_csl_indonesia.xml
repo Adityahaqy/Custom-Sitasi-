@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info>
+    <title>Indonesia Name-Year with Colon Page</title>
+    <id>http://www.example.com/indonesia-name-year-colon</id>
+    <link href="http://www.zotero.org/styles" rel="self"/>
+    <author>
+      <name>ChatGPT Custom Style</name>
+    </author>
+    <category citation-format="author-date"/>
+    <category field="generic"/>
+    <updated>2025-01-01T00:00:00+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under CC BY-SA 3.0</rights>
+  </info>
+
+  <!-- Citation format -->
+  <citation et-al-min="4" et-al-use-first="1" disambiguate-add-year-suffix="true">
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group delimiter=", ">
+        <names variable="author">
+          <name form="short"/>
+          <et-al term="et-al" prefix=" "/>
+        </names>
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </group>
+      <label variable="page" form="short" prefix=":"/> 
+      <text variable="page"/>
+    </layout>
+  </citation>
+
+  <!-- Bibliography format -->
+  <bibliography et-al-min="4" et-al-use-first="1" entry-spacing="1" line-spacing="1">
+    <layout suffix=".">
+      <group delimiter=". ">
+        <names variable="author">
+          <name form="long" delimiter=", " and=" & "/>
+        </names>
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+        <text variable="title"/>
+        <group delimiter=", ">
+          <text variable="publisher"/>
+          <text variable="publisher-place"/>
+        </group>
+      </group>
+    </layout>
+  </bibliography>
+</style>
